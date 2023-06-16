@@ -8,11 +8,29 @@ class CalculatorController extends Controller
 {
     public function add($a, $b)
     {
-        return $a + $b;
+        $result = $a + $b;
+
+        return ['result' => $result];
     }
 
     public function subtract($a, $b)
     {
-        return $a - $b;
+        $result = $a - $b;
+
+        return ['result' => $result];
+    }
+
+    public function multiply($a, $b)
+    {
+        $result = $a * $b;
+
+        return ['result' => $result];
+    }
+
+    public function divide($a, $b)
+    {
+        $result = $a / $b;
+
+        return ['result' => $result];
     }
 }
