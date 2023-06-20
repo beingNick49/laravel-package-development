@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use cubed\calculator\CalculatorController;
 
 Route::get('hello', function () {
-    return response()->json(['message' => 'Hello from the calculator package!']);
+    return response()->json([
+        'success' => true,
+        'message' => 'Hello from the calculator package!'
+    ]);
 });
 
 Route::get('add/{a}/{b}', [CalculatorController::class, 'add']);
